@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="MainScene" extends="Scene">
+	<script type="text/brightscript" uri="./MainScene.brs"/>
+	
+	<children>
+      <Label id="helloWorldLabel" 
+      	text="Hello World!"
+      	width="1280" 
+      	height="720" 
+      	horizAlign="center"
+      	vertAlign="center"
+      	/>
+    </children>
+</component>
