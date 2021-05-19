@@ -1,18 +1,35 @@
 sub main(args as Dynamic)
     print "LOG - Main() - Starting Channel"
-    launchMainScene()
+    runUnitTests = args.RunTests = "true" and type(TestRunner) = "Function"
+    launchMainScene(runUnitTests)
 end sub
 
-sub launchMainScene()
+sub launchMainScene(runUnitTests)
     mainScreen = CreateObject("roSGScreen")
     m.port = CreateObject("roMessagePort")
     
+    scene = ifThenElse(runUnitTests, "TestScene", "MainScene")
+    
     mainScreen.setMessagePort(m.port)
-
-    mainScene = mainScreen.CreateScene("MainScene")
-
+    mainScene = mainScreen.CreateScene(scene)
     mainScreen.show()
+    
+    if runUnitTests then setupTestRunnerAndExecuteTests()
 
+    createEventLoop()
+end sub
+
+sub setupTestRunnerAndExecuteTests()
+    Runner = TestRunner()
+    Runner.Logger.SetVerbosity(2)
+    Runner.Logger.SetEcho(false)
+    Runner.Logger.SetJUnit(false)
+    Runner.SetFailFast(false)
+    
+    Runner.Run()
+end sub
+
+sub createEventLoop()
     while(true)
         msg = wait(0, m.port)
         msgType = type(msg)

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="TestScene" extends="Scene">
+	<script type="text/brightscript" uri="./TestScene.brs"/>
+	
+	<children>
+      <Label id="testSceneLabel" 
+      	text="Running unit tests"
+      	width="1280" 
+      	height="720" 
+      	horizAlign="center"
+      	vertAlign="center"
+      	/>
+    </children>
+</component>
