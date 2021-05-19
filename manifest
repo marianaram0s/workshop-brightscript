@@ -5,9 +5,9 @@ minor_version=0
 build_version=1
 
 ##   Channel Assets
-mm_icon_focus_fhd=pkg:/images/channel-poster_fhd.png
-mm_icon_focus_hd=pkg:/images/channel-poster_hd.png
-mm_icon_focus_sd=pkg:/images/channel-poster_sd.png
+mm_icon_focus_fhd=pkg:/images/channel-poster_fhd.jpeg
+mm_icon_focus_hd=pkg:/images/channel-poster_hd.jpeg
+mm_icon_focus_sd=pkg:/images/channel-poster_sd.jpeg
 
 ###  Splash Screen + Loading Screen Artwork 
 splash_screen_fhd=pkg:/images/splash-screen_fhd.jpg

@@ -21,6 +21,11 @@ end sub
 
 sub setupTestRunnerAndExecuteTests()
     Runner = TestRunner()
+    
+    testsBySourcePackage = []
+    testsBySourcePackage.append(getUtilsTests())
+            
+    Runner.SetFunctions(testsBySourcePackage)
     Runner.Logger.SetVerbosity(2)
     Runner.Logger.SetEcho(false)
     Runner.Logger.SetJUnit(false)
