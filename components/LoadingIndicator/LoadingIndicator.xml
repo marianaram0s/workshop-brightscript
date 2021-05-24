@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="LoadingIndicator" extends="Group" xsi:schemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+	<interface>
+		<function name="show"/>
+		<function name="hide"/>
+	</interface>
+	
 	<script type="text/brightscript" uri="pkg:/components/loadingIndicator/LoadingIndicator.brs" />
 	<script type="text/brightscript" uri="pkg:/source/utils/Constants.brs"/>
 	
