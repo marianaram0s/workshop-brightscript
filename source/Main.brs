@@ -1,5 +1,5 @@
 sub main(args as Dynamic)
-    print "LOG - Main() - Starting Channel"
+    print "LOG - Main() - Starting App"
     runUnitTests = args.RunTests = "true" and type(TestRunner) = "Function"
     launchMainScene(runUnitTests)
 end sub

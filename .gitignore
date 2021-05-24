@@ -3,3 +3,4 @@ out/
 # Eclipse Core
 .project
 .DS_Store
+.settings
