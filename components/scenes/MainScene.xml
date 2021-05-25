@@ -2,9 +2,9 @@
 
 <component name="MainScene" extends="Scene">
 	<script type="text/brightscript" uri="./MainScene.brs"/>
-	<script type="text/brightscript" uri="pkg:/components/UILogic/ScreenStackLogic.brs" />
-	<script type="text/brightscript" uri="pkg:/components/UILogic/GridScreenLogic.brs" />
-	<script type="text/brightscript" uri="pkg:/components/UILogic/ContentTaskLogic.brs" />
+	<script type="text/brightscript" uri="pkg:/components/controllers/ScreenStackController.brs" />
+	<script type="text/brightscript" uri="pkg:/components/controllers/GridScreenController.brs" />
+	<script type="text/brightscript" uri="pkg:/components/controllers/ContentTaskController.brs" />
 	<script type="text/brightscript" uri="pkg:/source/utils/utils.brs" />
 	
 	<children>

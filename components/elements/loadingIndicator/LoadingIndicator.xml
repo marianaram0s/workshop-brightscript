@@ -5,7 +5,7 @@
 		<function name="hide"/>
 	</interface>
 	
-	<script type="text/brightscript" uri="pkg:/components/loadingIndicator/LoadingIndicator.brs" />
+	<script type="text/brightscript" uri="./LoadingIndicator.brs" />
 	<script type="text/brightscript" uri="pkg:/source/utils/Constants.brs"/>
 	
 	<children>

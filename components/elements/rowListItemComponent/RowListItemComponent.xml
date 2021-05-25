@@ -5,7 +5,7 @@
       <field id="itemContent" type="node" onChange="onContentSet" />
     </interface>
     
-    <script type="text/brightscript" uri="RowListItemComponent.brs" />
+    <script type="text/brightscript" uri="./RowListItemComponent.brs" />
     <script type="text/brightscript" uri="pkg:/source/utils/utils.brs" />
     
     <children>

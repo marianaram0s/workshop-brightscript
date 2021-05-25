@@ -5,7 +5,7 @@
         <field id="content" type="node" />
     </interface>
 
-    <script type="text/brightscript" uri="ContentLoaderTask.brs" />
+    <script type="text/brightscript" uri="./ContentLoaderTask.brs" />
     <script type="text/brightscript" uri="pkg:/source/utils/Constants.brs" />
     <script type="text/brightscript" uri="pkg:/source/utils/utils.brs" />
 </component>
