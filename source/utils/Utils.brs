@@ -246,6 +246,7 @@ Function toBoolean(parameter as dynamic) as boolean
     end if
 end function
 
+'If argument is valid and true, return trueValue, else return falseValue
 function ifThenElse(arg, trueValue, falseValue)
     if isValid(arg) and isBoolean(arg)
         if arg
@@ -256,4 +257,17 @@ function ifThenElse(arg, trueValue, falseValue)
     end if
     
     return invalid
+end function
+
+'convert seconds to mm:ss format
+' getTime(138) returns 2:18
+function getTime(length as Integer) as String
+    minutes = (length \ 60).ToStr()
+    seconds = length MOD 60
+    if seconds < 10
+       seconds = "0" + seconds.ToStr()
+    else
+       seconds = seconds.ToStr()
+    end if
+    return minutes + ":" + seconds
 end function

@@ -8,6 +8,14 @@
 	<script type="text/brightscript" uri="pkg:/source/utils/utils.brs" />
 	
 	<children>
+		<Overhang
+            id="overhang"
+            showOptions="false"
+            showClock="false"
+            logoUri="pkg:/images/hd_overhang_logo.png"
+            translation="[0,60]"
+        />
+        
 		<LoadingIndicator id="loadingIndicator" />	
 	</children>
 </component>
