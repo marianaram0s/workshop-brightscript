@@ -25,3 +25,7 @@ sub closeScreen(node as Object)
         end if
     end if
 end sub
+
+function getScreenStack()
+    return m.screenStack
+end function

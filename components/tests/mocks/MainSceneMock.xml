@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="MainSceneMock" extends="Scene" xsi:schemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+
+	<script type="text/brightscript" uri="pkg:/components/tests/mocks/MainSceneMock.brs" />
+	
+	<script type="text/brightscript" uri="pkg:/components/controllers/ScreenStackController.brs" />
+	<script type="text/brightscript" uri="pkg:/source/utils/utils.brs" />
+</component>
