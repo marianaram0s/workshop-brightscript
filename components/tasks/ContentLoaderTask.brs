@@ -51,12 +51,7 @@ end function
 function getItemData(video as Object) as Object
     item = {}
     
-    if isValid(video.longDescription)
-        item.description = video.longDescription
-    else
-        item.description = video.shortDescription
-    end if
-    
+    item.description = ifThenElse(isValid(video.longDescription), video.longDescription, video.shortDescription)
     item.hdPosterURL = video.thumbnail
     item.title = video.title
     item.releaseDate = video.releaseDate

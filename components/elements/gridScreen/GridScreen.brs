@@ -3,7 +3,7 @@ sub init()
     m.rowList.SetFocus(true)
     m.descriptionLabel = m.top.findNode("descriptionLabel")
     m.titleLabel = m.top.FindNode("titleLabel")
-    m.rowList.ObserveField("rowItemFocused", "OnItemFocused")
+    m.rowList.ObserveField("rowItemFocused", "onItemFocused")
 end sub
 
 sub onItemFocused()
