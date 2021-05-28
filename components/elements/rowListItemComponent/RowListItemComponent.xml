@@ -2,7 +2,7 @@
 
 <component name="RowListItemComponent" extends="Group" xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
     <interface>
-      <field id="itemContent" type="node" onChange="onContentSet" />
+      <field id="itemContent" type="node"/>
     </interface>
     
     <script type="text/brightscript" uri="./RowListItemComponent.brs" />
