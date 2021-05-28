@@ -1,3 +1,7 @@
+sub init()
+    m.top.ObserveField("itemContent", "onContentSet")
+end sub
+
 sub onContentSet()
     content = m.top.itemContent
     
