@@ -29,3 +29,7 @@ end sub
 function getScreenStack()
     return m.screenStack
 end function
+
+function GetCurrentScreen()
+    return m.screenStack.Peek()
+end function

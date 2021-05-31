@@ -16,3 +16,9 @@ sub onItemFocused()
     
     if isValid(item.length) then m.titleLabel.text += " | " + getTime(item.length)
 end sub
+
+sub OnVisibleChange() ' invoked when GridScreen change visibility
+    if m.top.visible = true
+        m.rowList.SetFocus(true) ' set focus to rowList if GridScreen visible
+    end if
+end sub
