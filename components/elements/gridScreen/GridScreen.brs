@@ -3,6 +3,7 @@ sub init()
     m.rowList.SetFocus(true)
     m.descriptionLabel = m.top.findNode("descriptionLabel")
     m.titleLabel = m.top.FindNode("titleLabel")
+    m.top.ObserveField("visible", "onVisibleChange")
     m.rowList.ObserveField("rowItemFocused", "onItemFocused")
 end sub
 
@@ -17,8 +18,6 @@ sub onItemFocused()
     if isValid(item.length) then m.titleLabel.text += " | " + getTime(item.length)
 end sub
 
-sub OnVisibleChange() ' invoked when GridScreen change visibility
-    if m.top.visible = true
-        m.rowList.SetFocus(true) ' set focus to rowList if GridScreen visible
-    end if
+sub onVisibleChange()
+    if m.top.visible = true then m.rowList.SetFocus(true)
 end sub
