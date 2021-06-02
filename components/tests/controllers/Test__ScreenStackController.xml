@@ -4,8 +4,15 @@
 		<function name="TestFramework__RunNodeTests"/>
 	</interface>
 	
+<<<<<<< HEAD
 	<script type="text/brightscript" uri="pkg:/source/testFramework/UnitTestFramework.brs"/>
 	<script type="text/brightscript" uri="pkg:/components/tests/controllers/Test__ScreenStackController.brs" />
 	<script type="text/brightscript" uri="pkg:/components/controllers/ScreenStackController.brs" />
 	<script type="text/brightscript" uri="pkg:/source/utils/utils.brs" />
+=======
+	<script type="text/brightscript" uri="pkg:/source/testFramework/UnitTestFramework.brs" />
+	<script type="text/brightscript" uri="pkg:/components/tests/controllers/Test__ScreenStackController.brs" />
+	<script type="text/brightscript" uri="pkg:/components/controllers/ScreenStackController.brs" />
+	<script type="text/brightscript" uri="pkg:/source/utils/Utils.brs" />
+>>>>>>> main
 </component>

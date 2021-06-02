@@ -1,23 +1,36 @@
 sub init()
     Runner = TestRunner()
     Runner.SetFunctions([
-        setup
-        shouldAddNewScreeenOnStackAndTurnVisible
+        setupTest
+        shouldHideCurrentScreenAndShowTheNewScreen
+        shouldShowTheNewScreen
     ])
 end sub
 
-'@BeforeAll
-sub setup()
+'@BeforeEach
+sub setupTest()
     initScreenStack()
 end sub
 
 '@Test
-sub shouldAddNewScreeenOnStackAndTurnVisible()
-    mainScreen = CreateObject("roSGScreen")
-    mainScreen.CreateScene("MainSceneMock")
+sub shouldHideCurrentScreenAndShowTheNewScreen()
+    currentScreen = createObject("roSGNode", "Poster")
+    setScreenStack(currentScreen)
+    newScreen = createObject("roSGNode", "Rectangle")
     
-    newNode = CreateObject("roSGNode", "GridScreen")
+    showScreen(newScreen)
     
-    showScreen(newNode)
-    UTF_assertTrue(getScreenStack().Peek().IsSameNode(newNode))
+    UTF_assertFalse(currentScreen.visible)
+    UTF_assertTrue(newScreen.visible)
+end sub
+
+'@Test
+sub shouldShowTheNewScreen()
+    newScreen = createObject("roSGNode", "Poster")
+    showScreen(newScreen)
+    UTF_assertTrue(newScreen.visible)
+end sub
+
+sub setScreenStack(node)
+    m.screenStack.push(node)
 end sub
