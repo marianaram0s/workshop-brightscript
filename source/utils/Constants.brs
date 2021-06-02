@@ -12,3 +12,9 @@ function getRequestsParams()
         CONTENT_FEED_URL : "https://jonathanbduval.com/roku/feeds/roku-developers-feed-v1.json"
     }
 end function
+
+function getDetailsScreenButtonOptions()
+    return [
+        "Voltar"
+    ]
+end function

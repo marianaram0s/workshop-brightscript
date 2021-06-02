@@ -273,7 +273,7 @@ function getTime(length as Integer) as String
 end function
 
 ' Helper function convert AA to Node
-function ContentListToSimpleNode(contentList as Object, nodeType = "ContentNode" as String) as Object
+function convertContentListToSimpleNode(contentList as Object, nodeType = "ContentNode" as String) as Object
     result = CreateObject("roSGNode", nodeType) ' create node instance based on specified nodeType
     if result <> invalid
         ' go through contentList and create node instance for each item of list
