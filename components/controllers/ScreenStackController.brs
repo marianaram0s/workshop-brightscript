@@ -13,7 +13,7 @@ sub showScreen(node as Object)
 end sub
 
 sub closeScreen(node as Object)
-    if isValid(node) OR (isValid(m.screenStack.Peek() AND m.screenStack.Peek().IsSameNode(node)))
+    if isInvalid(node) OR (isValid(m.screenStack.Peek()) AND m.screenStack.Peek().IsSameNode(node))
         currentScreen = m.screenStack.Pop()
         currentScreen.visible = false
         m.top.RemoveChild(node)
