@@ -1,10 +1,11 @@
 sub init()
     Runner = TestRunner()
-    Runner.SetFunctions([
-        setupTest
-        shouldHideCurrentScreenAndShowTheNewScreen
-        shouldShowTheNewScreen
-    ])
+    Runner.SetFunctions([ 
+      setupTest
+      shouldHideCurrentScreenAndShowTheNewScreen
+      shouldShowTheNewScreen
+      shouldRemoveScreenFromStackWhenNodeIsInvalid
+      ])
 end sub
 
 '@BeforeEach
@@ -33,4 +34,12 @@ end sub
 
 sub setScreenStack(node)
     m.screenStack.push(node)
+end sub
+
+'@Test
+sub shouldRemoveScreenFromStackWhenNodeIsInvalid()
+    currentScreen = createObject("roSGNode", "Poster")
+    setScreenStack(currentScreen)
+    closeScreen(currentScreen)
+    UTF_assertFalse(currentScreen.visible)
 end sub
