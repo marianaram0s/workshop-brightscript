@@ -8,6 +8,7 @@
         <field id="jumpToItem" type="integer" onChange="OnJumpToItem" value="0" alwaysNotify="true" />
         <field id="itemFocused" type="integer" alwaysNotify="true" />     
         <field id="buttonSelected" type="integer" alias="buttons.itemSelected" />
+        <field id="showMore" type = "boolean" alias="moreInfosGroup.visible" />
     </interface>
     <children>
         <LayoutGroup
@@ -51,7 +52,9 @@
                     itemSpacing="[0,10]"
                     itemSize="[593, 48]"
                 />
-                <LayoutGroup
+                <LayoutGroup 
+                	id="moreInfosGroup"
+                	visible = "false"
                     itemSpacings="[40]"
                     translation="[0, 208]">
                     <Label

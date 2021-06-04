@@ -15,6 +15,7 @@ end function
 
 function getDetailsScreenButtonOptions()
     return [
+        "Ver detalhes"
         "Voltar"
     ]
 end function
