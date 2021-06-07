@@ -9,7 +9,8 @@ end function
 function getRequestsParams()
     return {
         DEFAULT_CERTIFICATE : "common:/certs/ca-bundle.crt"
-        CONTENT_FEED_URL : "https://jonathanbduval.com/roku/feeds/roku-developers-feed-v1.json"
+        CONTENT_FEED_URL : "https://jonathanbduval.com/roku/feeds/roku-developers-feed-v1.json",
+        MENU_DATA_URL : "https://bfftv.qa.telecinecloud.com/api/v1/navigation"
     }
 end function
 

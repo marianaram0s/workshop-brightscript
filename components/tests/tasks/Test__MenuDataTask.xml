@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component name="Test__MenuDataTask" extends="MenuDataTask">
+    <interface>
+		<function name="TestFramework__RunNodeTests"/>
+	</interface>
+
+    <script type="text/brightscript" uri="./Test__MenuDataTask.brs" />
+    <script type="text/brightscript" uri="pkg:/components/tests/mocks/UrlTransferMock.brs" />
+    <script type="text/brightscript" uri="pkg:/source/testFramework/UnitTestFramework.brs" />
+</component>
