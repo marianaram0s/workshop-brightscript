@@ -1,5 +1,6 @@
 *.zip
 out/
+scripts/dependencies/
 # Eclipse Core
 .project
 .DS_Store

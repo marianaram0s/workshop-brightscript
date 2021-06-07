@@ -20,7 +20,7 @@ ROKU_DEVICE_PWD = os.environ.get('ROKU_DEVICE_PWD') or 'webmedia'
 
 
 def zip_files():
-    file_paths = get_all_file_paths(ROOT_DIRECTORY, filtered_dirs=['/out'])
+    file_paths = get_all_file_paths(ROOT_DIRECTORY, filtered_dirs=['/out', 'scripts'])
 
     destination_zip_file_path = "%s/%s" % (RELEASE_DIR, CHANNEL_NAME)
     if os.path.exists(destination_zip_file_path + '.zip'):
@@ -70,7 +70,10 @@ def send_home_key():
 
 
 def plugin_install_request(files):
-	print(requests.post('http://' + ROKU_DEVICE_IP + '/plugin_install', files=files, auth=HTTPDigestAuth(ROKU_DEVICE_USER, ROKU_DEVICE_PWD)))
+	try:
+		print(requests.post('http://' + ROKU_DEVICE_IP + '/plugin_install', files=files, auth=HTTPDigestAuth(ROKU_DEVICE_USER, ROKU_DEVICE_PWD)))
+	except Exception as e:
+		print(e)
 
 
 def getRequestFiles(submitType, archive=''):
@@ -89,6 +92,7 @@ def upload_channel():
 
 	print('Loading channel...')
 	destination_zip_file_path = "%s/%s" % (RELEASE_DIR, CHANNEL_NAME)
+	
 	plugin_install_request(getRequestFiles('Install', open(destination_zip_file_path + '.zip', 'rb')))
 
 	print('Done')
