@@ -285,3 +285,12 @@ function convertContentListToSimpleNode(contentList as Object, nodeType = "Conte
     end if
     return result
 end function
+
+function contains(array, value)
+    if IsNotEmptyArray(array) and isValid(value)
+        for each item in array
+            if item = value then return true
+        end for
+    end if
+    return false
+end function
