@@ -2,8 +2,13 @@ sub init()
     m.rowList = m.top.FindNode("rowList")
     m.rowList.SetFocus(true)
     m.descriptionLabel = m.top.findNode("descriptionLabel")
+    m.top.ObserveField("visible", "onVisibleChange")
     m.titleLabel = m.top.FindNode("titleLabel")
     m.rowList.ObserveField("rowItemFocused", "onItemFocused")
+end sub
+
+sub onVisibleChange()
+    if m.top.visible = true then m.rowList.SetFocus(true)
 end sub
 
 sub onItemFocused()

@@ -5,7 +5,9 @@
 	<script type="text/brightscript" uri="pkg:/components/controllers/ScreenStackController.brs" />
 	<script type="text/brightscript" uri="pkg:/components/controllers/GridScreenController.brs" />
 	<script type="text/brightscript" uri="pkg:/components/controllers/ContentTaskController.brs" />
-	<script type="text/brightscript" uri="pkg:/source/utils/utils.brs" />
+	<script type="text/brightscript" uri="pkg:/components/controllers/DetailsScreenController.brs" />
+	<script type="text/brightscript" uri="pkg:/source/utils/Utils.brs" />
+	<script type="text/brightscript" uri="pkg:/source/utils/Constants.brs" />
 	
 	<children>
 		<Overhang

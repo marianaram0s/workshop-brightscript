@@ -18,7 +18,9 @@ sub shouldHideCurrentScreenAndShowTheNewScreen()
     currentScreen = createObject("roSGNode", "Poster")
     setScreenStack(currentScreen)
     newScreen = createObject("roSGNode", "Rectangle")
+    
     showScreen(newScreen)
+    
     UTF_assertFalse(currentScreen.visible)
     UTF_assertTrue(newScreen.visible)
 end sub

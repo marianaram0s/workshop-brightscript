@@ -271,3 +271,17 @@ function getTime(length as Integer) as String
     end if
     return minutes + ":" + seconds
 end function
+
+' Helper function convert AA to Node
+function convertContentListToSimpleNode(contentList as Object, nodeType = "ContentNode" as String) as Object
+    result = CreateObject("roSGNode", nodeType) ' create node instance based on specified nodeType
+    if result <> invalid
+        ' go through contentList and create node instance for each item of list
+        for each itemAA in contentList
+            item = CreateObject("roSGNode", nodeType)
+            item.SetFields(itemAA)
+            result.AppendChild(item) 
+        end for
+    end if
+    return result
+end function
