@@ -14,6 +14,6 @@ sub shouldReceiveValidJsonWhenRequestApi()
     UTF_assertNotInvalid(menuData)
 end sub
 
-sub setUrlTransfer()
-    m.UrlTransfer = getUrlTransferMock()
+sub setURLTransfer()
+    m.URLTransfer = getUrlTransferMock()
 end sub
