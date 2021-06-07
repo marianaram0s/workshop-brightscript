@@ -7,6 +7,7 @@
 	
 	<script type="text/brightscript" uri="./LoadingIndicator.brs" />
 	<script type="text/brightscript" uri="pkg:/source/utils/Constants.brs"/>
+	<script type="text/brightscript" uri="pkg:/source/utils/Utils.brs"/>
 	
 	<children>
 		<BusySpinner
@@ -16,5 +17,21 @@
             control="stop"
             visible="false"
         />
+         <Poster
+            id="loadingBackground"
+            translation="[576, 338]"
+            visible="false"
+            opacity="0.8">
+            <Label
+                id="loadingLabel"
+                text="Carregando"
+                translation="[17, 9]"
+                visible="false"
+                horizAlign="center"
+                vertAlign="center"
+                color="0xffffffff"
+            >
+            </Label>
+        </Poster>
 	</children>
 </component>

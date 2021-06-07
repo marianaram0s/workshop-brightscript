@@ -294,3 +294,8 @@ function contains(array, value)
     end if
     return false
 end function
+
+function isLowEndDevice()
+    model = createObject("roDeviceInfo").getModel()
+    return contains(getLowEndDevicesModels(), model)
+end function
