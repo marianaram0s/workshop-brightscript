@@ -3,6 +3,7 @@
 import sys
 import os
 from subprocess import Popen
+from time import sleep
 
 
 SCRIPTS_HOME = os.path.dirname(os.path.realpath(__file__))
