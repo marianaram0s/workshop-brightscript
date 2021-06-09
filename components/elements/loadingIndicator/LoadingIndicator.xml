@@ -4,11 +4,10 @@
 		<function name="show"/>
 		<function name="hide"/>
 	</interface>
-
+	
 	<script type="text/brightscript" uri="./LoadingIndicator.brs" />
-	<script type="text/brightscript" uri="pkg:/source/utils/Utils.brs"/>
 	<script type="text/brightscript" uri="pkg:/source/utils/Constants.brs"/>
-
+	
 	<children>
 		<BusySpinner
             id="spinner"
@@ -17,14 +16,5 @@
             control="stop"
             visible="false"
         />
-
-		<Label id="label-spinner"
-			text="Carregando..."
-			width="1280"
-			height="720"
-			horizAlign="center"
-			vertAlign="center"
-			visible="false"
-      	/>
 	</children>
 </component>
