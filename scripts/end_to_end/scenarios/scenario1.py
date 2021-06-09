@@ -23,3 +23,4 @@ class Scenario1(Scenario):
 		self.web_driver.press_btn("down")
 		self.web_driver.press_btn("left")
 		self.web_driver.press_btn("left")
+		self.web_driver.press_btn("up")
