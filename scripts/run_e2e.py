@@ -10,7 +10,7 @@ SCRIPTS_HOME = os.path.dirname(os.path.realpath(__file__))
 DEPENDENCIES_HOME = f'{SCRIPTS_HOME}/dependencies'
 GO_HOME = f'{DEPENDENCIES_HOME}/go'
 ACT_HOME = f'{DEPENDENCIES_HOME}/automated-channel-testing'
-ROKU_DEVICE_IP = os.environ.get('ROKU_DEVICE_IP') or '192.168.1.6'
+ROKU_DEVICE_IP = os.environ.get('ROKU_DEVICE_IP') or '192.168.0.11'
 
 
 def is_go_installed():

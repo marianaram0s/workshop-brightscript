@@ -14,9 +14,9 @@ from requests.auth import HTTPDigestAuth
 ROOT_DIRECTORY = '../'
 CHANNEL_NAME = 'workshop-brightscript-channel'
 RELEASE_DIR = "../out"
-ROKU_DEVICE_IP = os.environ.get('ROKU_DEVICE_IP') or '192.168.1.6'
+ROKU_DEVICE_IP = os.environ.get('ROKU_DEVICE_IP') or '192.168.0.11'
 ROKU_DEVICE_USER = os.environ.get('ROKU_DEVICE_USER') or 'rokudev'
-ROKU_DEVICE_PWD = os.environ.get('ROKU_DEVICE_PWD') or 'webmedia'
+ROKU_DEVICE_PWD = os.environ.get('ROKU_DEVICE_PWD') or '0507'
 
 
 def zip_files():

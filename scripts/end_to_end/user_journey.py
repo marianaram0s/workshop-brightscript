@@ -1,5 +1,6 @@
 from support.web_driver import WebDriver
 from scenarios.scenario1 import Scenario1
+from scenarios.scenario2 import Scenario2
 
 from time import sleep
 import sys
@@ -26,7 +27,7 @@ def run(ip: str):
 
         # TODO: load scenarios automatically into the array
         scenarios = [
-            Scenario1(web_driver)
+            Scenario2(web_driver)
         ]
 
         total_scenarios = len(scenarios)
